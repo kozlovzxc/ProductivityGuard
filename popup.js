@@ -11,8 +11,9 @@ function addCurrentUrl()
                     alert('Current url is in the list');
             else
                 forbidden_hostnames = [current_hostname];
-            chrome.storage.sync.set(result);
-            alert("Current url has been added");
+            chrome.storage.sync.set({'forbidden_hostnames': forbidden_hostnames}, function() {
+              alert("Current url has been added");
+            });
             chrome.tabs.update(tabs[0].id, {"url": "nope.html#"+tabs[0].url});
         });
     });
