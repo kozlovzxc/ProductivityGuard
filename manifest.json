@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "ProductivityGuard",
+  "description": "This extension will block very often visited unwanted sites",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "static/icon.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ]
+}
