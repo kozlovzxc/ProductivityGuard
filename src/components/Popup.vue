@@ -1,25 +1,34 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <el-button @click="visible = true">Button</el-button>
-    <el-dialog v-model="visible" title="Hello world">
-      <p>Try Element</p>
-    </el-dialog>
+    <p>{{ count }}</p>
+    <p>
+      <button @click="addCurrentUrl">Add current</button>
+      <button @click="deleteCurrentUrl">Delete current</button>
+    </p>
   </div>
 </template>
 
 <script>
+// import { mapState } from 'vuex'
+
 export default {
-  name: 'hello',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  name: 'popup',
+  computed: {
+    count () {
+      return this.$store.state.blacklist.urls
+    }
+  },
+  methods: {
+    addCurrentUrl () {
+      this.$store.commit('blacklist/addCurrentUrl')
+    },
+    deleteCurrentUrl () {
+      this.$store.commit('blacklist/deleteCurrentUrl')
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
   font-weight: normal;
