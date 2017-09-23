@@ -16,7 +16,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '../node_modules/element-ui/lib/theme-default/index.css';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
