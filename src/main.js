@@ -17,5 +17,8 @@ new Vue({
   el: '#app',
   render: h => h(App),
   router,
-  store
+  store,
+  mounted: function () {
+    this.$store.dispatch('blacklist/fetchData')
+  }
 })

@@ -4,7 +4,7 @@ import Nope from './components/Nope'
 
 const routes = [
   { path: '/', component: Popup },
-  { path: '/nope', component: Nope }
+  { path: '/nope/:url', component: Nope }
 ]
 
 const router = new VueRouter({

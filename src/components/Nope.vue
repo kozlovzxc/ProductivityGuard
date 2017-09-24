@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <h1>{{ $route.params.url }} is forbidden</h1>
 </template>
 
 <script>

@@ -9,8 +9,6 @@
 </template>
 
 <script>
-// import { mapState } from 'vuex'
-
 export default {
   name: 'popup',
   computed: {
@@ -20,10 +18,10 @@ export default {
   },
   methods: {
     addCurrentUrl () {
-      this.$store.commit('blacklist/addCurrentUrl')
+      this.$store.dispatch('blacklist/addCurrentUrl')
     },
     deleteCurrentUrl () {
-      this.$store.commit('blacklist/deleteCurrentUrl')
+      this.$store.dispatch('blacklist/deleteCurrentUrl')
     }
   }
 }
