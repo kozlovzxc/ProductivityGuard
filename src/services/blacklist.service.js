@@ -21,6 +21,8 @@ const blacklist = {
         cmd: 'update'
       })
     },
+    deleteUrl: function (context) {
+    },
     addCurrentUrl: function (context) {
       chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         const currentHostname = getHostname(tabs[0].url)
