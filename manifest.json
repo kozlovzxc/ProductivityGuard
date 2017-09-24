@@ -9,6 +9,15 @@
   },
   "permissions": [
     "tabs",
-    "storage"
-  ]
+    "storage",
+    "background"
+  ],
+  "background": {
+    "scripts": [
+      "static/js/manifest.js",
+      "static/js/vendor.js",
+      "static/js/background.js"
+    ],
+    "persistent": false
+  }
 }

@@ -8,7 +8,7 @@ Vue.use(Elements)
 
 import App from './App'
 import router from './router'
-import store from './store.service.js'
+import store from './store.service'
 
 Vue.config.productionTip = false
 
