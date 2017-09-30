@@ -8,7 +8,7 @@ Vue.use(Elements)
 
 import App from './App'
 import router from './router'
-import store from './store.service'
+import store from './store'
 
 Vue.config.productionTip = false
 
@@ -19,6 +19,6 @@ new Vue({
   router,
   store,
   mounted: function () {
-    this.$store.dispatch('blacklist/fetchData')
+    this.$store.dispatch('fetchData')
   }
 })

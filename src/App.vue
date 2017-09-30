@@ -15,15 +15,6 @@ export default {
 
 $primary-color: #58B7FF;
 
-* {
-  padding: 5px;
-}
-
-body {
-  min-width: 300px;
-  min-height: 300px;
-}
-
 a {
   color: #42b983;
 }
@@ -34,6 +25,5 @@ a {
   -moz-osx-font-smoothing: grayscale;
   padding: 20px;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

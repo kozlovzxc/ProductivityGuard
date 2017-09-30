@@ -5,6 +5,7 @@ import { getHostname } from '../common'
 const blacklist = {
   namespaced: true,
   state: {
+    enabled: true,
     hostnames: []
   },
   actions: {
@@ -14,11 +15,19 @@ const blacklist = {
           context.state.hostnames = result['blacklistedUrls']
           resolve()
         })
+      }).then(function () {
+        return new Promise((resolve, reject) => {
+          chrome.storage.sync.get('enabled', function (result) {
+            context.state.enabled = result['enabled']
+            resolve()
+          })
+        })
       })
     },
     notifyBackground: function (context) {
       chrome.runtime.sendMessage({
-        cmd: 'update'
+        cmd: 'update',
+        store: 'blacklist'
       })
     },
     addHostname: function (context, hostname) {
