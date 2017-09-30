@@ -39,7 +39,6 @@ store.dispatch('fetchData')
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.cmd === 'update') {
     store.dispatch('fetchData')
-      .then(() => console.log(store.state))
       .then(checkTabs)
   } else {
     console.log(`unknown command: ${request.cmd}`)
