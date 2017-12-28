@@ -12,7 +12,8 @@ const blacklist = {
     fetchData: function (context) {
       return new Promise((resolve, reject) => {
         chrome.storage.sync.get('blacklistedUrls', function (result) {
-          context.state.hostnames = result['blacklistedUrls']
+          let blacklistedUrls = result['blacklistedUrls']
+          context.state.hostnames = blacklistedUrls || []
           resolve()
         })
       }).then(function () {
