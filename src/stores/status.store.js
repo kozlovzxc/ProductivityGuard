@@ -36,6 +36,9 @@ const blacklist = {
         status.enabled = !status.enabled
         chrome.storage.sync.set({status}, function () {
           context.state.enabled = status.enabled
+          chrome.browserAction.setIcon({
+            path: status.enabled ? 'static/icon.png' : 'static/icon_bw.png'
+          })
           context.dispatch('notifyBackground')
         })
       })
