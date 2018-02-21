@@ -31,3 +31,8 @@ npm run build --report
 
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+## Credits
+
+Icons made by [Darius Dan](https://www.flaticon.com/authors/darius-dan) from [www.flaticon.com](https://www.flaticon.com/] is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
